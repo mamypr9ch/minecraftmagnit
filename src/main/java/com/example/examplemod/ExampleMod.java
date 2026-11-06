@@ -102,6 +102,10 @@ public class ExampleMod
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
+        if (event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+            // Добавляем предмет нашего магнита в список отображения
+            event.accept(ModBlocks.MAGNET_BLOCK_ITEM.get());
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
